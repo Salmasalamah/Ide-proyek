@@ -1,16 +1,21 @@
-# mobile_fasaaa_field
+# Fasaaa Field 🏟️
+Aplikasi Pemesanan Lapangan Olahraga berbasis Mobile.
 
-A new Flutter project.
+Aplikasi ini dibuat untuk memenuhi tugas mata kuliah Pemrograman Mobile. Fasaaa Field memudahkan pengguna untuk mengecek ketersediaan lapangan dan melakukan booking secara instan.
 
-## Getting Started
+## ✨ Fitur Utama
+* **Dashboard Layanan**: Tampilan menu lapangan yang responsif (Futsal, Basket, Badminton, Tenis).
+* **Form Pemesanan**: Perhitungan biaya otomatis berdasarkan durasi sewa.
+* **Sistem Promo**: Fitur input kode promo untuk potongan harga.
+* **Riwayat Lokal (SQLite)**: Menyimpan data pemesanan ke database internal HP sehingga data tidak hilang saat aplikasi ditutup.
 
-This project is a starting point for a Flutter application.
+## 🛠️ Teknologi
+* **Framework**: Flutter
+* **Bahasa**: Dart
+* **Database**: SQLite (sqflite package)
+* **State Management**: Dasar (StatefulWidget)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Cara Menjalankan
+1. Clone repositori ini.
+2. Jalankan `flutter pub get` di terminal.
+3. Sambungkan perangkat Android dan jalankan `flutter run`.
