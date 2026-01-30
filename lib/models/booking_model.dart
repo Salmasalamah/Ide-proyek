@@ -1,26 +1,49 @@
-class Booking {
+class BookingModel {
   final String id;
-  final String nama;
-  final String lapangan;
-  final String tanggal;
-  final String harga;
+  final String teamName;
+  final String fieldName;
+  final String date;
+  final int duration;
+  final int totalPrice;
+  final String package;
+  final String status;
 
-  Booking({
-    required this.id, 
-    required this.nama, 
-    required this.lapangan, 
-    required this.tanggal, 
-    required this.harga
+  BookingModel({
+    required this.id,
+    required this.teamName,
+    required this.fieldName,
+    required this.date,
+    required this.duration,
+    required this.totalPrice,
+    required this.package,
+    required this.status,
   });
 
-  factory Booking.fromJson(Map<String, dynamic> json) {
-    return Booking(
-      id: json['id_booking']?.toString() ?? '0',
-      // Mencari key 'nama_tim' atau 'nama' agar tidak muncul "Kosong"
-      nama: json['nama_tim'] ?? json['nama'] ?? 'Tim Umum',
-      lapangan: json['jenis_lapangan'] ?? json['lapangan'] ?? 'Umum',
-      tanggal: json['tanggal_booking'] ?? json['tanggal'] ?? '-',
-      harga: json['total_harga']?.toString() ?? json['harga']?.toString() ?? '0',
-    );
+factory BookingModel.fromMap(Map<String, dynamic> map, String id) {
+  return BookingModel(
+    id: id,
+    teamName: map['teamName'] ?? '',
+    fieldName: map['fieldName'] ?? '',
+    date: map['date'] ?? '',
+    duration: int.tryParse(map['duration'].toString()) ?? 0,
+    totalPrice: int.tryParse(map['totalPrice'].toString()) ?? 0,
+    package: map['package'] ?? '',
+    status: map['status'] ?? '',
+  );
+}
+
+
+
+  // 🔥 Object → Firebase
+  Map<String, dynamic> toMap() {
+    return {
+      'teamName': teamName,
+      'fieldName': fieldName,
+      'date': date,
+      'duration': duration,
+      'totalPrice': totalPrice,
+      'package': package,
+      'status': status,
+    };
   }
 }

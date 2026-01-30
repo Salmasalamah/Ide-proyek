@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "157179348974",
+    "project_id": "fasaaa-field-fix",
+    "storage_bucket": "fasaaa-field-fix.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157179348974:android:3b241b1d8a2df7920ff0ff",
+        "android_client_info": {
+          "package_name": "com.example.mobile_fasaaa_field"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7ZWK4sIhfVaILTP1BeAkjzFTfttyH5mI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
